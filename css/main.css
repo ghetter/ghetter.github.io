@@ -1,0 +1,201 @@
+body{
+	font-family: 'Nunito', sans-serif;
+	background-color: #080808;
+}
+
+.content {
+	width: 99%;
+	height: 99%;
+	margin: 0 auto;
+	padding: 100px 0px 0px 0px;
+	z-index: 999;
+	position: absolute;
+	min-height: 2000px;
+
+	border: 1px solid #080808;
+
+	background: rgba(21, 21, 21, 0.7);
+}
+
+.content_main {
+	height: 100px;
+	margin: 0px 0px 200px 0px;
+
+}
+
+.content_main h1{
+	margin: 0px 0px 50px 0px;
+	font-size: 24px;
+	color: #e0e0e0;
+	text-align: center;
+}
+
+.content_main h3{
+	margin: 0px 0px 80px 0px;
+	font-size: 16px;
+	color: #e0e0e0;
+	text-align: center;
+}
+
+.content_main p{
+	width: 1100px;
+	margin: 0 auto;
+
+	font-size: 15px;
+	text-align: justify;
+	color: #e0e0e0;
+}
+
+.content_main p>span{
+	color: #f0f0f0;
+	font-weight: 600;
+}
+
+.content_main a{
+	text-decoration: none;
+}
+
+.content_main a>span{
+	color: #f0f0f0;
+}
+
+.content_solar-system{
+	width: 1000px;
+	margin: 0 auto;
+	padding: 200px 0px 0px 0px;
+}
+
+.content_solar-system h3{
+	display: block;
+	width: 160px;
+	text-align: center;
+	margin: 0px auto 40px auto;
+	font-size: 16px;
+	font-weight: 700;
+	color: #e0e0e0;
+}
+
+.content_solar-system p{
+	width: 900px;
+	margin: 0px auto 30px auto;
+
+	font-size: 15px;
+	text-align: justify;
+	color: #e0e0e0;
+}
+
+.content_solar-system img{
+	display: block;
+	width: 600px;
+	margin: 0 auto;
+	padding: 50px; 
+}
+
+.content_nav {
+	width: 600px;
+	margin: 0px auto 300px auto;
+}
+
+.content_nav h3{
+	width: 400px;
+}
+
+.content_nav p{
+	width: 200px;
+	text-align: center;
+	margin: 0px auto 15px auto;
+}
+
+.content_nav a{
+	color: #196969;
+	text-decoration: none;
+}
+
+/*
+
+.content_nav p:before {
+	content: '';
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	margin: 0px 15px 0px 0px;
+	border-radius: 50%;
+}
+
+*/
+
+.content_nav p:hover {
+	color: #efefef;
+	font-weight: 700;
+}
+
+.content_nav p:hover:before{
+	content: '';
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	margin: 0px 15px 0px 0px;
+	border-radius: 50%;
+
+	background-color: #f20f20;
+}
+
+
+.content_contacts {
+	width: 100px;
+	margin: 0 auto;
+	padding-bottom: 5px;
+}
+
+.content_contacts {
+	font-size: 10px;
+	color: #e0e0e0;
+}
+
+
+.hr{
+	width: 1000px;
+	margin: 0px auto 0px auto;
+	border-bottom: 1px solid #e0e0e0;
+	border-radius: 25px;
+}
+
+/* Этот фрагмент делал не я */
+
+@import "susy";
+@import "compass/reset";
+
+.stars, .twinkling, .clouds {
+	position:absolute;
+	display:block;
+	top:0; bottom:0;
+	left:0; right:0;
+	width:100%; height:500px;
+}
+
+.stars {
+	z-index: 0;
+	background: #000 url('https://image.ibb.co/mjnygo/stars.png') repeat top center;
+}
+
+.twinkling{
+	z-index: 1;
+	background:transparent url('https://image.ibb.co/ir1DE8/twinkling.png') repeat top center;
+	animation: move-twink-back 200s linear infinite;
+}
+
+.clouds{
+	z-index: 2;
+    background:transparent url('https://image.ibb.co/bT4N7T/clouds.png') repeat top center;
+	animation: move-clouds-back 200s linear infinite;
+}
+
+@keyframes move-twink-back {
+	from {background-position:0 0;}
+	to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+	from {background-position:0 0;}
+	to {background-position:10000px 0;}
+}
